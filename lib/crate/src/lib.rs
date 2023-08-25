@@ -8,6 +8,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn generate_key() -> Result<String, String> {
+    crate::utils::set_panic_hook();
     let key = JWK::generate_ed25519()
         .map_err(|error| format!("failed to generate session key: {}", error))?;
     let s =
