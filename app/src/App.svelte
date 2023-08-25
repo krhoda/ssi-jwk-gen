@@ -2,6 +2,7 @@
 	export let name: string;
 	import { JWKGen } from "crate";
 	import { onMount } from "svelte";
+
 	onMount(async () => {
 		let j = await JWKGen.initialize();
 		let s = j.generate_key();

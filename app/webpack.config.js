@@ -15,6 +15,11 @@ module.exports = {
 		},
 		extensions: ['.mjs', '.js', '.ts', '.svelte'],
 		mainFields: ['svelte', 'browser', 'module', 'main'],
+		fallback: { 
+			"fs": false,
+			"path": require.resolve("path-browserify"),
+			"url": require.resolve("url/")
+		},
 		conditionNames: ['svelte', 'browser']
 	},
 	output: {

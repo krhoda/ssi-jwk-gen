@@ -3,7 +3,6 @@ mod utils;
 use serde::{Deserialize, Serialize};
 use serde_json::{from_str, to_string};
 use ssi::jwk::JWK;
-use tsify::Tsify;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
